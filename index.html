@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raghad's Portfolio</title>
   <style>
-    /* ألوان الباستيل */
     :root {
       --lavender: #c8b5f9;
       --mint: #a9ece2;
@@ -15,118 +14,217 @@
       --bg: #f7f7fb;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      scroll-behavior: smooth;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(5px);
-      padding: 1rem;
-      text-align: center;
-      font-weight: bold;
-      color: var(--title);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       gap: 2rem;
-      padding: 0 1rem;
     }
 
-    .card {
-      background-color: white;
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      color: var(--title);
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Education Section */
+    .education h2,
+    .skills h2,
+    .projects h2 {
+      font-size: 2rem;
+      color: var(--title);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .education-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .education-item {
+      background: white;
+      padding: 1rem 1.5rem;
       border-radius: 15px;
-      padding: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    h1 {
-      color: var(--title);
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: var(--text);
-    }
-
-    .icons {
+    /* Skills Section */
+    .skills-list {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
-      margin-top: 1rem;
+      justify-content: center;
     }
 
-    .icon {
-      width: 30px;
-      height: 30px;
+    .skill {
       background-color: var(--lavender);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    /* Projects Section */
+    .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.2s;
     }
 
-    .icon:hover {
-      transform: scale(1.1);
+    .project-item:hover {
+      transform: translateY(-5px);
     }
 
+    .project-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .project-item p {
+      padding: 1rem;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    Raghad's Blog
-  </header>
 
-  <main>
-    <div class="card">
-      <h1>Hello I'm Raghad</h1>
-      <p>Computer Science graduate | Interested in Data Analysis & Web Development</p>
-      <div class="icons">
-        <div class="icon">❤️</div>
-        <div class="icon">💬</div>
-        <div class="icon">🔗</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Raghad</h1>
+      <p>
+        Recent graduate in Computer Science with a strong foundation in programming, data analysis, and web development. Gained experience through academic and training projects. Eager to apply academic knowledge in real-world projects and seeking to gain experience to enhance skills and contribute effectively to team success.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/500x400/8b5cf6/ffffff?text=Your+Specialization" alt="Specialization Image">
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education">
+    <h2>Education</h2>
+    <div class="education-list">
+      <div class="education-item">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>University Name – Graduation Year</p>
+      </div>
+      <div class="education-item">
+        <h3>Relevant Trainings & Certifications</h3>
+        <p>Example: Python for Data Science, Web Development Bootcamp</p>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200/c8b5f9/ffffff?text=Project+1" alt="Project 1">
-      <p>Example Project 1 description goes here.</p>
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Data Analysis</div>
+      <div class="skill">Web Development</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Excel</div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200/a9ece2/ffffff?text=Project+2" alt="Project 2">
-      <p>Example Project 2 description goes here.</p>
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project-item">
+        <img src="https://via.placeholder.com/300x200/c8b5f9/ffffff?text=Project+1" alt="Project 1">
+        <p>Example Project 1 description goes here.</p>
+      </div>
+      <div class="project-item">
+        <img src="https://via.placeholder.com/300x200/a9ece2/ffffff?text=Project+2" alt="Project 2">
+        <p>Example Project 2 description goes here.</p>
+      </div>
+      <div class="project-item">
+        <img src="https://via.placeholder.com/300x200/b7a0f3/ffffff?text=Project+3" alt="Project 3">
+        <p>Example Project 3 description goes here.</p>
+      </div>
     </div>
-  </main>
+  </section>
 
   <footer>
     © 2025 – Raghad's Portfolio
   </footer>
+
 </body>
 </html>
+
