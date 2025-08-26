@@ -4,9 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raghad's Portfolio</title>
+  <style>
+    /* ألوان الباستيل */
+    :root {
+      --lavender: #c8b5f9;
+      --mint: #a9ece2;
+      --deepLavender: #b7a0f3;
+      --text: #6b7280;
+      --title: #8b5cf6;
+      --bg: #f7f7fb;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(5px);
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      color: var(--title);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: var(--title);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      background-color: var(--lavender);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+    }
+
+  </style>
 </head>
 <body>
-  <h1>Hello I'm Raghad</h1>
-  <p>Computer Science graduate | Interested in Data Analysis & Web Development</p>
+  <header>
+    Raghad's Blog
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Hello I'm Raghad</h1>
+      <p>Computer Science graduate | Interested in Data Analysis & Web Development</p>
+      <div class="icons">
+        <div class="icon">❤️</div>
+        <div class="icon">💬</div>
+        <div class="icon">🔗</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200/c8b5f9/ffffff?text=Project+1" alt="Project 1">
+      <p>Example Project 1 description goes here.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200/a9ece2/ffffff?text=Project+2" alt="Project 2">
+      <p>Example Project 2 description goes here.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 – Raghad's Portfolio
+  </footer>
 </body>
 </html>
