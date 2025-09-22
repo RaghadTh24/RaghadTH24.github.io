@@ -1,0 +1,579 @@
+
+/* Portfolio Cover Image*/
+
+  .portfolio-cover {
+    width: 800px;       
+    height: auto;       
+    display: block;
+    margin: 20px auto; 
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-cover {
+      width:90%;      
+    }
+  }
+
+  /* background*/
+
+  body {
+  background-color: #F7E7DA;
+}
+
+ /* Links Banner*/
+
+  .links-banner {
+    background-color: #F7A5A5;
+    width: 900px;              
+    padding: 30px 30px; 
+    margin: 40px auto;         
+    border-top-left-radius: 0;    
+    border-bottom-left-radius: 60px; 
+    border-top-right-radius: 0;   
+    border-bottom-right-radius: 60px; 
+    text-align: center;    
+  }
+
+   .links-banner a {
+    color: #FFF2EF;  
+    text-decoration: none;
+    margin: 0 35px; 
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;      
+    font-size: 1.2rem;        
+    transition: color 0.3s;   
+  }
+
+  .links-banner a:hover {
+  color: #B87979;           
+}
+
+
+
+ /*Intro Section*/
+
+  .intro-section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Istok Web', sans-serif; 
+  }
+
+  .intro-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .intro-greeting {
+    color: #819067;
+    font-size: 1.2rem;
+    margin: 0 0 3px 0;
+    font-weight: bold;   
+  }
+
+  .intro-name {
+    color: #819067;
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    font-weight: bold;  
+  }
+
+  .intro-description {
+    color: #353535;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .intro-image {
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
+  }
+
+  .intro-image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .intro-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .intro-image {
+      text-align: center;
+    }
+  }
+.hero-links {
+  margin-top: 0rem; /* قريب جداً من النص */
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start; /* حركهم لليسار */
+}
+
+.circle-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* شيلت box-shadow */
+  transition: transform 0.2s;
+}
+
+.circle-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-link:hover {
+  transform: scale(1.1);
+}
+
+/* About Me Title */
+.portfolio-cover-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.about-me-title {
+  font-size: 2rem; /* نفس حجم الاسم */
+  color: #819067; 
+  font-weight: bold;
+  margin-bottom: 30px; /* مسافة صغيرة بين العنوان والصورة */
+  text-align: center; /* مركزي فوق الصورة */
+   margin-left: 160px;
+}
+
+/* Professional Journey Section */
+.journey-section {
+  max-width: 1000px;
+  margin: 80px auto 80px auto;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.journey-header {
+  background-color: #F7A5A5;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 0 0 20px 20px; /* حواف علوية حادة وسفلية مدورة */
+  width: 60%;          
+  max-width: 900px;    
+  margin: 0 auto;      
+}
+
+.journey-header h2 {
+  color: #353535;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.journey-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+/* Common Box Style */
+.journey-box {
+  background-color: #FFF2EF;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.box-header {
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 15px 0 15px 0;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.education-header,
+.experience-header,
+.languages-header {
+  background-color: #819067;
+  color: #fff;
+}
+
+.box-content {
+  text-align: center;
+}
+
+.circle-img {
+  width: 90px;       /* صغر الصور الدائرية */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.box-title {
+  color: #819067;
+  font-size: 1.1rem;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.box-subtitle {
+  color: #353535;
+  margin: 5px 0;
+}
+
+.box-date,
+.box-gpa {
+  color: #353535;
+  margin: 2px 0;
+  font-size: 0.80rem;
+}
+
+/* Languages box inner style */
+.languages-box .language-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.language-item {
+  background-color: #FFF2EF;
+  padding: 10px;
+  text-align: center;
+}
+
+.language-name {
+  color: #353535;
+  font-weight: bold;
+  font-size: 0.90rem;
+  margin: 0;
+}
+
+.language-level {
+  color: #819067;
+  margin: 0;
+}
+
+/* Separator line for languages */
+.language-separator {
+  border: none;
+  height: 1px;
+  background-color: #CCCCCC;
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .journey-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Areas of Expertise Section */
+.expertise-section {
+  max-width: 1000px;
+  margin: 150px auto 0 auto;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.expertise-header {
+  background-color: #F7A5A5;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 0 0 20px 20px;
+  width: 60%;
+  margin: 0 auto 90px auto;
+}
+
+.expertise-header h2 {
+  color: #353535;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.expertise-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center; /* يوسّط الصناديق */
+}
+
+
+.expertise-box {
+  background-color: #FFF2EF;
+  border-radius: 20px;
+  padding: 30px 20px  60px  20px;
+  flex: 0 0 40%;   /* هذا يحافظ على عرض ثابت ويجعلها أنحف */
+  min-width: 240px; 
+  min-height: 350px;
+  box-sizing: border-box;
+}
+
+
+.expertise-title {
+  color: #819067;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;            /* شلنا margin-bottom */
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* المهارات صفين */
+  gap: 25px;
+  margin-top: 60px; /* المسافة بين العنوان والمهارات */
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #353535;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expertise-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem 1rem;
+  position: relative;
+  font-family: 'Istok Web', sans-serif;
+   margin-top: 60px;
+}
+
+/* Titles */
+.section-subtitle {
+  text-align: center;
+  color: #819067; /* أخضر */
+  font-size: 1.2rem;
+  margin-bottom: 1px; /* تقليل المسافة بين My Work و Projects */
+}
+.section-title {
+  text-align: center;
+  color: #819067;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+/* Projects Wrapper & Container */
+.projects-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding: 40px 50px;
+  overflow: hidden;
+}
+
+.projects-container {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Project Cards */
+.project-card {
+  flex: 0 0 300px;
+  min-height: 220px;
+  background-color: #ffffff; /* وردي فاتح */
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.project-card img.project-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  color: #B87979; /* لون العناوين داخل المشروع */
+  margin-bottom: 0.3rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  font-weight: normal; /* اجعل التواريخ عادية */
+}
+
+/* Project Links (GitHub / Demo) */
+.project-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #B87979;
+  background-color: rgba(184, 121, 121, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.project-links a:hover {
+  background-color: rgba(184, 121, 121, 0.4);
+}
+
+/* Navigation Buttons */
+.proj-btn {
+  background: #819067; /* أخضر */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.proj-btn:hover {
+  background: #6b8f6b;
+}
+.projects-prev { left: 40px; }
+.projects-next { right: 40px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    flex: 0 0 70%;
+    min-height: auto;
+  }
+  .proj-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Contact & Footer Section */
+.contact-footer {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #ffffff; /* يغطي كامل العرض */
+  color: #353535;
+  font-family: 'Istok Web', sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 30px; 
+}
+
+.contact-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-footer h2 {
+  color: #819067;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-divider {
+  border: none;
+  border-top: 2px solid rgba(0,0,0,0.1);
+  margin: 1rem auto 2rem auto;
+  width: 50%;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #353535;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.resume-text {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.resume-btn {
+  background-color: #819067;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.resume-btn:hover {
+  background-color: #6b7a55;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: rgba(0,0,0,0.6);
+  margin-top: 2rem;
+}
