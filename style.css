@@ -65,6 +65,9 @@
  
 }
 
+.menu-toggle {
+  display: none; /* إخفاء افتراضي على اللابتوب */
+}
 /* القائمة */
 .menu-links {
   display: flex;
@@ -182,7 +185,10 @@
   width: 300px;
   height: auto;
   border-radius: 20px;
+  max-height: 350px; /* يمنع الصورة من التمدد */
+  border-radius: 20px;
 }
+
 
 /* About Me Title */
 .about-me-title {
