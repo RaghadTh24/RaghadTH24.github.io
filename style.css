@@ -20,143 +20,214 @@
   background-color: #F7E7DA;
 }
 
- /* Links Banner*/
 
-  .links-banner {
-    background-color: #F7A5A5;
-    width: 900px;              
-    padding: 30px 30px; 
-    margin: 40px auto;         
-    border-top-left-radius: 0;    
-    border-bottom-left-radius: 60px; 
-    border-top-right-radius: 0;   
-    border-bottom-right-radius: 60px; 
-    text-align: center;    
-  }
 
-   .links-banner a {
-    color: #FFF2EF;  
-    text-decoration: none;
-    margin: 0 35px; 
-    font-family: 'Istok Web', sans-serif;
-    font-weight: bold;      
-    font-size: 1.2rem;        
-    transition: color 0.3s;   
-  }
 
-  .links-banner a:hover {
+/* Links Banner للابتوب */
+.links-banner {
+  background-color: #F7A5A5;
+  width: 900px;              
+  padding: 30px 30px; 
+  margin: 40px auto;         
+  border-top-left-radius: 0;    
+  border-bottom-left-radius: 60px; 
+  border-top-right-radius: 0;   
+  border-bottom-right-radius: 60px; 
+  text-align: center;    
+  position: relative;
+}
+
+/* روابط البانر */
+.links-banner a {
+  color: #FFF2EF;  
+  text-decoration: none;
+  margin: 0 30px; 
+  font-family: 'Istok Web', sans-serif;
+  font-weight: bold;      
+  font-size: 1.2rem;        
+  transition: color 0.3s;   
+}
+
+.links-banner a:hover {
   color: #B87979;           
 }
 
-
-
- /*Intro Section*/
-
-  .intro-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    font-family: 'Istok Web', sans-serif; 
-  }
-
-  .intro-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
-  .intro-text {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .intro-greeting {
-    color: #819067;
-    font-size: 1.2rem;
-    margin: 0 0 3px 0;
-    font-weight: bold;   
-  }
-
-  .intro-name {
-    color: #819067;
-    font-size: 2rem;
-    margin: 0 0 15px 0;
-    font-weight: bold;  
-  }
-
-  .intro-description {
-    color: #353535;
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-
-  .intro-image {
-    flex: 1;
-    min-width: 200px;
-    text-align: right;
-  }
-
-  .intro-image img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .intro-wrapper {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .intro-image {
-      text-align: center;
-    }
-  }
-.hero-links {
-  margin-top: 0rem; /* قريب جداً من النص */
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-start; /* حركهم لليسار */
+.menu-toggle {
+  display: none;             /* مخفي افتراضيًا على اللابتوب */
+  font-size: 1.8rem;           /* حجم أصغر قليلاً */
+  font-weight: bold;          
+  cursor: pointer;
+  color: #FFFFFF;             
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+ 
 }
 
-.circle-link {
+/* القائمة */
+.menu-links {
+  display: flex;
+  justify-content: center;    /* روابط بجانب بعض على اللابتوب */
+  gap: 35px;
+  flex-wrap: nowrap;
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+  .links-banner {
+    width: 80%;             
+    padding: 30px 30px;     
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 60px;
+    text-align: center;     
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;          /* يظهر على الجوال */
+  }
+
+  .menu-links {
+    display: none;           /* مخفية افتراضيًا */
+    flex-direction: column;  
+    gap: 15px;
+    margin-top: 20px;
+    padding-left: 100px;     /* تحريك القائمة يمين */
+  }
+
+  .menu-links.show {
+    display: flex;           /* تظهر عند الضغط على الزر */
+  }
+
+  .links-banner a {
+    margin: 10px 0;        
+    font-size: 1rem;       
+  }
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.intro-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.intro-left {
+  flex: 1;
+}
+
+.intro-right {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-greeting {
+  color: #819067;
+  font-size: 1.2rem;
+  margin: 0 0 3px 0;
+  font-weight: bold;
+}
+
+.intro-name {
+  color: #819067;
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.intro-description {
+  color: #353535;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Hero Links - الدوائر */
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.hero-links a {
   display: inline-block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  /* شيلت box-shadow */
   transition: transform 0.2s;
 }
 
-.circle-link img {
+.hero-links a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.circle-link:hover {
+.hero-links a:hover {
   transform: scale(1.1);
 }
 
-/* About Me Title */
-.portfolio-cover-wrapper {
-  position: relative;
-  width: fit-content;
-  margin: 20px auto;
-  text-align: center;
+.intro-right img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
 }
 
+/* About Me Title */
 .about-me-title {
-  font-size: 2rem; /* نفس حجم الاسم */
-  color: #819067; 
+  font-size: 2rem;        /* نفس حجم الاسم */
+  color: #819067;         /* نفس لون الاسم */
   font-weight: bold;
-  margin-bottom: 30px; /* مسافة صغيرة بين العنوان والصورة */
-  text-align: center; /* مركزي فوق الصورة */
-   margin-left: 160px;
+  margin-bottom: 20px;    /* مسافة بين العنوان والصورة */
+  text-align: center;     /* يوسّط النص فوق الصورة */
+}
+
+
+
+/* Media Queries للجوال */
+@media (max-width: 768px) {
+  .intro-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-left,
+  .intro-right {
+    text-align: center;
+    flex: unset;
+  }
+
+  .hero-links {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .intro-right img {
+    width: 250px;
+    margin-top: 10px;
+  }
+
+    .about-me-title {
+    font-size: 1.8rem;    /* أصغر شوي للجوال */
+    margin-bottom: 15px;
+  }
 }
 
 /* Professional Journey Section */
@@ -485,19 +556,46 @@
 /* Responsive */
 @media (max-width: 768px) {
   .projects-container {
-    flex-direction: column;
+    flex-direction: column;  /* عرض الكاردات تحت بعض */
     align-items: center;
   }
+
   .project-card {
-    flex: 0 0 70%;
-    min-height: auto;
+    flex: unset;             /* الغاء flex-grow/flex-shrink */
+    width: 90%;              /* عرض معقول للجوال */
+    max-width: 400px;
+    height: 420px;           /* ارتفاع ثابت */
+    padding: 1rem;
+    overflow: hidden;        /* إذا النص أطول، نخفي الفائض */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* محتوى الكارد يبدأ من الأعلى */
+    margin-bottom: 20px;     /* مسافة بين الكاردات */
   }
-  .proj-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+
+  .project-card img.project-logo {
+    height: 120px;           /* تقليل ارتفاع الصورة قليلًا */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+    .proj-btn {
+    display: none;  /* يخفي أزرار Previous / Next */
   }
 }
+
+
+
 
 /* Contact & Footer Section */
 .contact-footer {
