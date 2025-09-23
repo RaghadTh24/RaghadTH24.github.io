@@ -570,7 +570,7 @@
     flex: unset;             /* الغاء flex-grow/flex-shrink */
     width: 90%;              /* عرض معقول للجوال */
     max-width: 400px;
-    height: 420px;           /* ارتفاع ثابت */
+    height: 430px;           /* ارتفاع ثابت */
     padding: 1rem;
     overflow: hidden;        /* إذا النص أطول، نخفي الفائض */
     display: flex;
