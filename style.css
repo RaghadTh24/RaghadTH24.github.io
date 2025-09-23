@@ -202,15 +202,25 @@
 
 
 /* Media Queries للجوال */
+/* Media Queries للجوال */
 @media (max-width: 768px) {
   .intro-wrapper {
-    flex-direction: column;
+    flex-direction: column;      /* عرض الكتل فوق بعض */
     align-items: center;
     text-align: center;
   }
 
-  .intro-left,
+  /* الجانب الأيمن يظهر أولاً */
   .intro-right {
+    order: 1;                    /* يظهر أولاً */
+    text-align: center;
+    flex: unset;
+    margin-bottom: 20px;         /* مسافة بين الجوانب */
+  }
+
+  /* الجانب الأيسر يظهر بعد الجانب الأيمن */
+  .intro-left {
+    order: 2;
     text-align: center;
     flex: unset;
   }
@@ -230,11 +240,12 @@
     margin-top: 10px;
   }
 
-    .about-me-title {
-    font-size: 1.8rem;    /* أصغر شوي للجوال */
+  .about-me-title {
+    font-size: 1.8rem;           /* أصغر شوي للجوال */
     margin-bottom: 15px;
   }
 }
+
 
 /* Professional Journey Section */
 .journey-section {
@@ -570,7 +581,7 @@
     flex: unset;             /* الغاء flex-grow/flex-shrink */
     width: 90%;              /* عرض معقول للجوال */
     max-width: 400px;
-    height: 430px;           /* ارتفاع ثابت */
+    height: 450px;           /* ارتفاع ثابت */
     padding: 1rem;
     overflow: hidden;        /* إذا النص أطول، نخفي الفائض */
     display: flex;
